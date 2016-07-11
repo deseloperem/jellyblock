@@ -1,0 +1,15 @@
+@mixin selfClear($clear:null){
+	$where: '';
+	@if $clear == before{
+		$where: $clear;
+	}@else if $clear == after{
+		$where: $clear;
+	}@else{
+		$where : 'before, &:after';
+	}
+	&:#{$where}{
+		content:'';
+		display:block;
+		clear:both;
+	}
+}
