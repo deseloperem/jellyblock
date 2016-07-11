@@ -1,0 +1,9 @@
+.clear{
+	@include selfClear();
+}
+.clear-before{
+	@include selfClear(before);
+}
+.clear-after{
+	@include selfClear(after);
+}

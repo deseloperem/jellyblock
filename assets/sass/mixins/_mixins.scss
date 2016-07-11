@@ -1,10 +1,6 @@
 @mixin selfClear($clear:null){
-	$where: '';
-	@if $clear == before{
-		$where: $clear;
-	}@else if $clear == after{
-		$where: $clear;
-	}@else{
+	$where: $clear;
+	@if $clear == null{
 		$where : 'before, &:after';
 	}
 	&:#{$where}{
@@ -13,3 +9,4 @@
 		clear:both;
 	}
 }
+

@@ -1,1 +1,35 @@
-// 
+// colour scheme
+$theme1 : #000;
+$theme2 : #000;
+$theme3 : #000;
+
+
+$white : #fff;
+$black : #000;
+
+//cool grey
+$cgbase :#000;
+
+$cg1 : lighten($cgbase,20%);
+$cg3 : lighten($cgbase,20%);
+$cg5 : $cgbase;
+$cg7 : darken($cgbase,20%);
+$cg9 : darken($cgbase,20%);
+
+//neutral grey
+$ngbase :#000;
+
+$ng1 : lighten($ngbase,20%);
+$ng3 : lighten($ngbase,20%);
+$ng5 : $ngbase;
+$ng7 : darken($ngbase,20%);
+$ng9 : darken($ngbase,20%);
+
+//warm grey
+$wgbase :#000;
+
+$wg1 : lighten($wgbase,20%);
+$wg3 : lighten($wgbase,20%);
+$wg5 : $wgbase;
+$wg7 : darken($wgbase,20%);
+$wg9 : darken($wgbase,20%);
