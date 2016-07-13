@@ -3,7 +3,7 @@
 	@if $clear == null{
 		$where : 'before, &:after';
 	}
-	&:#{$where}{
+	&:#{$where} {
 		content:'';
 		display:block;
 		clear:both;

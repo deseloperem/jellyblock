@@ -1,0 +1,54 @@
+$mq-base: 20rem; //320px
+
+$mq-narrow: 30rem; //480px
+$mq-small: 40rem; //640px
+$mq-medium: 50rem; //800px
+$mq-large: 60rem; //960px
+$mq-wide: 80rem; //1280px
+
+$mq-full: 100%;
+
+//shorthand version
+// $mq-n : $mq-narrow; 
+// $mq-s : $mq-small; 
+// $mq-m : $mq-medium: 
+// $mq-l : $mq-large; 
+// $mq-w : $mq-wide; 
+// $mq-f: $mq-full;
+//
+
+$mobile-first : true; // option: false; 
+
+
+// this mediaquery is inclusive. 
+@mixin mq($value) {
+	$breakpoint : max;
+	@if $mobile-first == true {
+		$breakpoint : min;
+	}
+	@if $value == narrow {
+		@media screen and (#{$breakpoint}-width: $mq-narrow){
+			@content;
+		}
+	} @else if $value == small {
+		@media screen and (#{$breakpoint}-width: $mq-small){
+			@content;
+		}
+	} @else if $value == medium {
+		@media screen and (#{$breakpoint}-width: $mq-medium){
+			@content;
+		}
+	} @else if $value == large{
+		@media screen and (#{$breakpoint}-width: $mq-large){
+			@content;
+		}
+	} @else if $value == wide{
+		@media screen and (#{$breakpoint}-width: $mq-wide){
+			@content;
+		}
+	} @else { // this is a wildcard. user can add a pixel value of a breaking point.  
+		@media screen and (#{$breakpoint}-width: #{$value}px){
+			@content;
+		}
+	}
+}
