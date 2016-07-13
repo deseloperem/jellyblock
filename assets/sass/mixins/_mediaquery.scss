@@ -65,7 +65,7 @@ $mobile-first : true; // option: false;
 			@content;
 		}
 	} @else { // this is a wildcard. user can add a pixel value of a breaking point.  
-		@media screen and (#{$breakpoint}-width: #{$value}px){
+		@media screen and (#{$breakpoint}-width: $value * 1px){
 			@content;
 		}
 	}
