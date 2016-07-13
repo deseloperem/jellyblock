@@ -1,12 +1,15 @@
-$mq-base: 20rem; //320px
 
+
+$mq-tiny: 20rem; //320px
 $mq-narrow: 30rem; //480px
 $mq-small: 40rem; //640px
 $mq-medium: 50rem; //800px
 $mq-large: 60rem; //960px
-$mq-wide: 80rem; //1280px
+$mq-wide: 70rem; //1120px
+$mq-extended: 80rem; //1280px
+$mq-vast: 90rem; //1440px
 
-$mq-full: 100%;
+// $mq-full: 100%;
 
 //shorthand version
 // $mq-n : $mq-narrow; 
@@ -17,6 +20,8 @@ $mq-full: 100%;
 // $mq-f: $mq-full;
 //
 
+
+$mq-base: $mq-extended; 
 $mobile-first : true; // option: false; 
 
 
@@ -26,7 +31,11 @@ $mobile-first : true; // option: false;
 	@if $mobile-first == true {
 		$breakpoint : min;
 	}
-	@if $value == narrow {
+	@if $value == tiny {
+		@media screen and (#{$breakpoint}-width: $mq-tiny){
+			@content;
+		}
+	} @else if $value == narrow{
 		@media screen and (#{$breakpoint}-width: $mq-narrow){
 			@content;
 		}
@@ -44,6 +53,15 @@ $mobile-first : true; // option: false;
 		}
 	} @else if $value == wide{
 		@media screen and (#{$breakpoint}-width: $mq-wide){
+			@content;
+		}
+	} 
+	@else if $value == extended{
+		@media screen and (#{$breakpoint}-width: $mq-extended){
+			@content;
+		}
+	} @else if $value == vast{
+		@media screen and (#{$breakpoint}-width: $mq-vast){
 			@content;
 		}
 	} @else { // this is a wildcard. user can add a pixel value of a breaking point.  

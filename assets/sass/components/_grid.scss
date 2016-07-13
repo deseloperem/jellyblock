@@ -1,6 +1,16 @@
-$grid-base: 4.5rem; // 72px
+$grid-base: $mq-base; 
 
 $num-of-column : 12;
 $gutter: 2rem;
-$side-gutter: $gutter/2;
+$gutter-outside: true;
+
+@if $gutter-outside == true {
+	$grid-base : ($grid-base - $gutter);
+}
+
+//need to resolve unit issue. convert to percentage. 
+$num-of-gutter : $num-of-column - 1;
+$total-gutter : $num-of-gutter * $gutter;
+$total-col : $grid-base - $total-gutter;
+$col-base : $total-col / $num-of-column;
 

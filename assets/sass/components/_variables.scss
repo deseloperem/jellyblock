@@ -10,33 +10,33 @@ $black : #000;
 //cool grey
 $cgbase :#000;
 
-$cg1 : lighten($cgbase,20%);
-$cg3 : lighten($cgbase,20%);
-$cg5 : $cgbase;
-$cg7 : darken($cgbase,20%);
-$cg9 : darken($cgbase,20%);
+$cg-lightest : lighten($cgbase,20%);
+$cg-lighter : lighten($cgbase,20%);
+$cg-light : lighten($cgbase,20%);
+$cg : $cgbase;
+$cg-dark : darken($cgbase,20%);
+$cg-darker : darken($cgbase,20%);
+$cg-darkest : darken($cgbase,20%);
 
 //neutral grey
 $ngbase :#000;
-
-$ng1 : lighten($ngbase,20%);
-$ng3 : lighten($ngbase,20%);
-$ng5 : $ngbase;
-$ng7 : darken($ngbase,20%);
-$ng9 : darken($ngbase,20%);
+$ng-lightest : lighten($ngbase,20%);
+$ng-lighter : lighten($ngbase,20%);
+$ng-light : lighten($ngbase,20%);
+$ng : $ngbase;
+$ng-dark : darken($ngbase,20%);
+$ng-darker : darken($ngbase,20%);
+$ng-darkest : darken($ngbase,20%);
 
 //warm grey
 $wgbase :#000;
+$wg-lightest : lighten($wgbase,20%);
+$wg-lighter : lighten($wgbase,20%);
+$wg-light : lighten($wgbase,20%);
+$wg : $wgbase;
+$wg-dark : darken($wgbase,20%);
+$wg-darker : darken($wgbase,20%);
+$wg-darkest : darken($wgbase,20%);
 
-$wg1 : lighten($wgbase,20%);
-$wg3 : lighten($wgbase,20%);
-$wg5 : $wgbase;
-$wg7 : darken($wgbase,20%);
-$wg9 : darken($wgbase,20%);
 
-
-$narrow:320px;
-$small:00px;
-$medium : 00px;
-$large :00px;
-$wide : 00px;
+// will need to collate all variables on this page
